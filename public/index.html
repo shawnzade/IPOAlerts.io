@@ -7,21 +7,101 @@
   <link rel="manifest" href="manifest.json">
   <script defer src="js/app.js"></script>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    #toggle { margin-bottom: 10px; }
-    ul { list-style: none; padding-left: 20px; }
-    .category { font-weight: bold; cursor: pointer; margin-top: 10px; }
+    body {
+      background-color: #f7f9fc;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      margin-top: 0;
+      color: #1e88e5;
+    }
+    nav {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    nav a {
+      margin-right: 15px;
+      color: #1e88e5;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    #toggle-container {
+      margin-bottom: 20px;
+    }
+    #toggle-container label {
+      font-size: 14px;
+    }
+    /* Tree styling */
+    #tree {
+      list-style: none;
+      padding-left: 0;
+    }
+    .node-header {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 4px 0;
+    }
+    .arrow {
+      display: inline-block;
+      margin-right: 6px;
+      transition: transform 0.2s;
+    }
+    .arrow.open {
+      transform: rotate(90deg);
+    }
+    .node-label {
+      font-weight: 600;
+      color: #1e88e5;
+    }
+    .has-children .node-label {
+      color: #2c3e50;
+    }
+    .investor-list,
+    .company-list {
+      list-style: none;
+      margin: 4px 0 4px 16px;
+      padding-left: 12px;
+      border-left: 1px solid #e0e0e0;
+    }
+    .company {
+      padding: 2px 0;
+    }
+    .company[data-public="false"] {
+      color: #333;
+    }
+    .company[data-public="true"] {
+      color: #888;
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <h1>IPO Alerts</h1>
-  <nav>
-    <a href="subscribe.html">Subscribe</a> |
-    <a href="login.html">Login</a>
-  </nav>
-  <label>
-    <input type="checkbox" id="toggle"> Show public companies
-  </label>
-  <div id="tree"></div>
+  <div class="container">
+    <h1>IPO Alerts</h1>
+    <nav>
+      <a href="subscribe.html">Subscribe</a>
+      <a href="login.html">Login</a>
+    </nav>
+    <div id="toggle-container">
+      <label>
+        <input type="checkbox" id="toggle"> Show public companies
+      </label>
+    </div>
+    <ul id="tree"></ul>
+  </div>
 </body>
 </html>
