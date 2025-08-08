@@ -1,22 +1,42 @@
 {
-  "All In Podcast": [
-    { "name": "Ramp", "investor": "Chamath Palihapitiya", "public": false },
-    { "name": "Uber", "investor": "Chamath Palihapitiya", "public": true },
-    { "name": "Airbnb", "investor": "Jason Calacanis", "public": true }
-  ],
-  "PayPal Mafia": [
-    { "name": "SpaceX", "investor": "Elon Musk", "public": false },
-    { "name": "Tesla", "investor": "Elon Musk", "public": true },
-    { "name": "LinkedIn", "investor": "Reid Hoffman", "public": true }
-  ],
-  "Billionaire Investors": [
-    { "name": "OpenAI", "investor": "Sam Altman", "public": false },
-    { "name": "Stripe", "investor": "Patrick Collison", "public": false },
-    { "name": "Palantir", "investor": "Peter Thiel", "public": true }
-  ],
-  "Tech Giants": [
-    { "name": "Apple", "investor": "Steve Jobs", "public": true },
-    { "name": "Alphabet", "investor": "Larry Page", "public": true },
-    { "name": "Amazon", "investor": "Jeff Bezos", "public": true }
-  ]
+  "All In Podcast": {
+    "Chamath Palihapitiya": [
+      { "name": "Ramp", "public": false },
+      { "name": "Uber", "public": true }
+    ],
+    "Jason Calacanis": [
+      { "name": "Airbnb", "public": true }
+    ]
+  },
+  "PayPal Mafia": {
+    "Elon Musk": [
+      { "name": "SpaceX", "public": false },
+      { "name": "Tesla", "public": true }
+    ],
+    "Reid Hoffman": [
+      { "name": "LinkedIn", "public": true }
+    ]
+  },
+  "Billionaire Investors": {
+    "Sam Altman": [
+      { "name": "OpenAI", "public": false }
+    ],
+    "Patrick Collison": [
+      { "name": "Stripe", "public": false }
+    ],
+    "Peter Thiel": [
+      { "name": "Palantir", "public": true }
+    ]
+  },
+  "Tech Giants": {
+    "Steve Jobs": [
+      { "name": "Apple", "public": true }
+    ],
+    "Larry Page": [
+      { "name": "Alphabet", "public": true }
+    ],
+    "Jeff Bezos": [
+      { "name": "Amazon", "public": true }
+    ]
+  }
 }
