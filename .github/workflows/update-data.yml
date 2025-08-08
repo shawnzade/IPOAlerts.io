@@ -1,0 +1,40 @@
+name: Update Data
+
+on:
+  schedule:
+    # Run daily at 1 AM UTC
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: |
+          # Install dependencies if package.json exists; otherwise skip
+          if [ -f package.json ]; then
+            npm install
+          fi
+
+      - name: Run update_data.js
+        env:
+          HNWI_API_KEY: ${{ secrets.HNWI_API_KEY }}
+          HNWI_API_URL: ${{ secrets.HNWI_API_URL }}
+        run: node scripts/update_data.js
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add public/data/seed.json
+            git commit -m "Update seed.json with latest holdings"
+            git push
+          fi
