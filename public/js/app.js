@@ -8,69 +8,101 @@ function buildTree(data) {
   const container = document.getElementById('tree');
   container.innerHTML = '';
 
+  // Build categories
   Object.keys(data).forEach(category => {
-    // Create category node
-    const catNode = document.createElement('div');
-    catNode.className = 'category';
-    catNode.textContent = category;
-    
-    // List to hold investors and their companies
+    // Create category wrapper
+    const catDiv = document.createElement('div');
+    catDiv.className = 'category has-children';
+
+    // Header with arrow and label
+    const catHeader = document.createElement('div');
+    catHeader.className = 'node-header';
+    const catArrow = document.createElement('span');
+    catArrow.className = 'arrow';
+    catArrow.textContent = '\u25B6'; // triangle pointing right
+    const catLabel = document.createElement('span');
+    catLabel.className = 'node-label';
+    catLabel.textContent = category;
+
+    catHeader.appendChild(catArrow);
+    catHeader.appendChild(catLabel);
+    catDiv.appendChild(catHeader);
+
+    // Investor list
     const invList = document.createElement('ul');
+    invList.className = 'investor-list';
     invList.style.display = 'none';
 
-    // Toggle investor list visibility when category is clicked
-    catNode.addEventListener('click', () => {
-      invList.style.display = invList.style.display === 'none' ? 'block' : 'none';
+    // Toggle investor list on header click
+    catHeader.addEventListener('click', () => {
+      const open = invList.style.display === 'none';
+      invList.style.display = open ? 'block' : 'none';
+      catArrow.textContent = open ? '\u25BC' : '\u25B6'; // down vs right
     });
 
-    // Iterate over investors in this category
+    // Iterate investors
     Object.keys(data[category]).forEach(investor => {
       const investorItem = document.createElement('li');
-      investorItem.className = 'investor';
-      investorItem.textContent = investor;
+      investorItem.className = 'investor has-children';
 
+      // Investor header
+      const invHeader = document.createElement('div');
+      invHeader.className = 'node-header';
+      const invArrow = document.createElement('span');
+      invArrow.className = 'arrow';
+      invArrow.textContent = '\u25B6';
+      const invLabel = document.createElement('span');
+      invLabel.className = 'node-label';
+      invLabel.textContent = investor;
+
+      invHeader.appendChild(invArrow);
+      invHeader.appendChild(invLabel);
+      investorItem.appendChild(invHeader);
+
+      // Company list
       const compList = document.createElement('ul');
+      compList.className = 'company-list';
       compList.style.display = 'none';
 
-      // Toggle company list visibility when investor is clicked
-      investorItem.addEventListener('click', (e) => {
-        // Prevent event from bubbling up to category toggle
+      // Toggle company list
+      invHeader.addEventListener('click', (e) => {
         e.stopPropagation();
-        compList.style.display = compList.style.display === 'none' ? 'block' : 'none';
+        const openComp = compList.style.display === 'none';
+        compList.style.display = openComp ? 'block' : 'none';
+        invArrow.textContent = openComp ? '\u25BC' : '\u25B6';
       });
 
-      // Add companies under this investor
+      // Add companies
       data[category][investor].forEach(company => {
-        const coLi = document.createElement('li');
-        coLi.textContent = company.name + (company.public ? ' (Public)' : '');
-        coLi.dataset.public = company.public;
-        compList.appendChild(coLi);
+        const compItem = document.createElement('li');
+        compItem.className = 'company';
+        compItem.textContent = company.name;
+        compItem.dataset.public = company.public;
+        compList.appendChild(compItem);
       });
 
+      investorItem.appendChild(compList);
       invList.appendChild(investorItem);
-      invList.appendChild(compList);
     });
 
-    container.appendChild(catNode);
-    container.appendChild(invList);
+    catDiv.appendChild(invList);
+    container.appendChild(catDiv);
   });
 
+  // Set up show/hide public companies
   const toggle = document.getElementById('toggle');
-
-  function updateVisibility() {
-    // Show or hide public companies based on toggle
-    const companyItems = container.querySelectorAll('li');
-    companyItems.forEach(item => {
-      if (item.dataset.public === 'true') {
-        item.style.display = toggle.checked ? 'list-item' : 'none';
-      } else if (item.dataset.public === 'false') {
-        item.style.display = 'list-item';
-      }
-    });
+  if (toggle) {
+    toggle.addEventListener('change', () => updateVisibility(toggle.checked));
+    updateVisibility(toggle.checked);
   }
-
-  toggle.addEventListener('change', updateVisibility);
-  updateVisibility();
 }
 
+function updateVisibility(showPublic) {
+  document.querySelectorAll('.company').forEach(item => {
+    const isPublic = item.dataset.public === 'true';
+    item.style.display = (!showPublic && isPublic) ? 'none' : 'list-item';
+  });
+}
+
+// Load data initially
 loadData();
