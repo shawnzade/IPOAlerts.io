@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IPO Alerts</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="manifest" href="manifest.json">
-  <script defer src="js/app.js"></script>
   <style>
     body {
-      background-color: #f7f9fc;
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f7f9fc;
       color: #333;
     }
     .container {
       max-width: 800px;
       margin: 40px auto;
+      padding: 20px;
       background-color: #fff;
-      padding: 20px 30px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      margin-top: 0;
-      color: #1e88e5;
     }
     nav {
+      display: flex;
+      justify-content: flex-end;
       margin-bottom: 20px;
-      font-size: 14px;
     }
     nav a {
-      margin-right: 15px;
-      color: #1e88e5;
+      margin-left: 15px;
       text-decoration: none;
+      color: #1e88e5;
+      font-weight: bold;
     }
     nav a:hover {
       text-decoration: underline;
@@ -41,41 +38,22 @@
     #toggle-container {
       margin-bottom: 20px;
     }
-    #toggle-container label {
-      font-size: 14px;
+    label {
+      margin-right: 10px;
     }
-    /* Tree styling */
-    #tree {
+    ul {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
     }
-    .node-header {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      padding: 4px 0;
+    .category {
+      margin-bottom: 10px;
+      padding-left: 10px;
+      border-left: 4px solid #1e88e5;
     }
-    .arrow {
-      display: inline-block;
-      margin-right: 6px;
-      transition: transform 0.2s;
-    }
-    .arrow.open {
-      transform: rotate(90deg);
-    }
-    .node-label {
-      font-weight: 600;
-      color: #1e88e5;
-    }
-    .has-children .node-label {
-      color: #2c3e50;
-    }
-    .investor-list,
-    .company-list {
-      list-style: none;
-      margin: 4px 0 4px 16px;
-      padding-left: 12px;
-      border-left: 1px solid #e0e0e0;
+    .investor {
+      margin-bottom: 5px;
+      padding-left: 10px;
+      border-left: 3px solid #90caf9;
     }
     .company {
       padding: 2px 0;
@@ -86,6 +64,17 @@
     .company[data-public="true"] {
       color: #888;
       display: none;
+    }
+    /* Highlight nodes with children */
+    .node-label {
+      color: #333;
+    }
+    .has-children .node-label {
+      color: #1e88e5;
+      font-weight: 600;
+    }
+    .has-children .arrow {
+      color: #1e88e5;
     }
   </style>
 </head>
@@ -103,5 +92,6 @@
     </div>
     <ul id="tree"></ul>
   </div>
+  <script src="js/app.js" defer></script>
 </body>
 </html>
