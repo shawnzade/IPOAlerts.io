@@ -1,73 +1,142 @@
 {
   "All In Podcast": {
     "Chamath Palihapitiya": [
-      { "name": "Ramp", "public": false },
-      { "name": "Uber", "public": true }
+      {
+        "name": "Ramp ($22.5B)",
+        "public": false
+      },
+      {
+        "name": "Uber",
+        "public": true
+      }
     ],
     "Jason Calacanis": [
-      { "name": "Airbnb", "public": true }
+      {
+        "name": "Airbnb",
+        "public": true
+      }
     ]
   },
   "PayPal Mafia": {
     "Elon Musk": [
-      { "name": "SpaceX", "public": false },
-      { "name": "Tesla", "public": true }
+      {
+        "name": "SpaceX ($400B)",
+        "public": false
+      },
+      {
+        "name": "Tesla",
+        "public": true
+      }
     ],
     "Reid Hoffman": [
-      { "name": "LinkedIn", "public": true }
+      {
+        "name": "LinkedIn",
+        "public": true
+      }
     ],
     "Peter Thiel": [
-      { "name": "Palantir", "public": true }
+      {
+        "name": "Palantir",
+        "public": true
+      }
     ],
     "Max Levchin": [
-      { "name": "Affirm", "public": true }
+      {
+        "name": "Affirm",
+        "public": true
+      }
     ],
     "Ken Howery": [
-      { "name": "Founders Fund", "public": false }
+      {
+        "name": "Founders Fund",
+        "public": false
+      }
     ],
     "Luke Nosek": [
-      { "name": "Gigafund", "public": false }
+      {
+        "name": "Gigafund",
+        "public": false
+      }
     ],
     "David Sacks": [
-      { "name": "Craft Ventures", "public": false }
+      {
+        "name": "Craft Ventures",
+        "public": false
+      }
     ],
     "Joe Lonsdale": [
-      { "name": "Palantir", "public": true }
+      {
+        "name": "Palantir",
+        "public": true
+      }
     ]
   },
   "Billionaire Investors": {
     "Bill Gates": [
-      { "name": "Breakthrough Energy", "public": false },
-      { "name": "TerraPower", "public": false }
+      {
+        "name": "Breakthrough Energy",
+        "public": false
+      },
+      {
+        "name": "TerraPower",
+        "public": false
+      }
     ],
     "Sam Altman": [
-      { "name": "OpenAI", "public": false }
+      {
+        "name": "OpenAI ($300B)",
+        "public": false
+      }
     ],
     "Patrick Collison": [
-      { "name": "Stripe", "public": false }
+      {
+        "name": "Stripe ($65B)",
+        "public": false
+      }
     ],
     "Peter Thiel": [
-      { "name": "Founders Fund", "public": false }
+      {
+        "name": "Founders Fund",
+        "public": false
+      }
     ]
   },
   "Tech Giants & FAANG": {
     "Mark Zuckerberg": [
-      { "name": "Meta", "public": true }
+      {
+        "name": "Meta",
+        "public": true
+      }
     ],
     "Larry Page": [
-      { "name": "Alphabet", "public": true }
+      {
+        "name": "Alphabet",
+        "public": true
+      }
     ],
     "Jeff Bezos": [
-      { "name": "Amazon", "public": true }
+      {
+        "name": "Amazon",
+        "public": true
+      }
     ],
     "Reed Hastings": [
-      { "name": "Netflix", "public": true }
+      {
+        "name": "Netflix",
+        "public": true
+      }
     ],
     "Tim Cook": [
-      { "name": "Apple", "public": true }
+      {
+        "name": "Apple",
+        "public": true
+      }
     ],
     "Bill Gates": [
-      { "name": "Microsoft", "public": true }
+      {
+        "name": "Microsoft",
+        "public": true
+      }
     ]
   }
 }
