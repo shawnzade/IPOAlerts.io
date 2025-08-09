@@ -5,109 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IPO Alerts</title>
   <link rel="manifest" href="manifest.json">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f9fc;
-      color: #333;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-    nav {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 20px;
-    }
-    nav a {
-      margin-left: 15px;
-      text-decoration: none;
-      color: #1e88e5;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    #toggle-container {
-      margin-bottom: 20px;
-    }
-    label {
-      margin-right: 10px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    .category {
-      margin-bottom: 10px;
-      padding-left: 10px;
-      border-left: 4px solid #1e88e5;
-    }
-    .investor {
-      margin-bottom: 5px;
-      padding-left: 10px;
-        /* Highlight nodes with children */
-  .node-label {
-    color: #333;
-  }
-
-  .has-children .node-label {
-    color: #1e88e5;
-    font-weight: 600;
-  }
-
-  .has-children .arrow {
-    color: #1e88e5;
-  }
-
-  /* Valuation style */
-  .valuation {
-    color: #2e7d32;
-    font-weight: bold;
-  }
-   /* Highlight nodes with children */
-  .node-label {
-    color: #333;
-  }
-
-  .has-children .node-label {
-    color: #1e88e5;
-    font-weight: 600;
-  }
-
-  .has-children .arrow {
-    color: #1e88e5;
-  }
-
-  /* Valuation style */
-  .valuation {
-    color: #2e7d32;
-    font-weight: bold;
-  }
-
-</style>/style>
+  <!-- Load Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Load external stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>IPO Alerts</h1>
     <nav>
-      <a href="subscribe.html">Subscribe</a>
-      <a href="login.html">Login</a>
+      <div><h1>IPO Alerts</h1></div>
+      <div>
+        <a href="subscribe.html">Subscribe</a>
+        <a href="login.html">Login</a>
+      </div>
     </nav>
-    <div id="toggle-container">
-      <label>
-        <input type="checkbox" id="toggle"> Show public companies
-      </label>
-    </div>
-    <ul id="tree"></ul>
+    <label class="toggle">
+      <input type="checkbox" id="show-public">
+      Show public companies
+    </label>
+    <div id="tree"></div>
   </div>
-  <script src="js/app.js" defer></script>
+  <script defer src="js/app.js"></script>
 </body>
-</html>
+
+  </html>
