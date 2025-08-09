@@ -10,7 +10,7 @@ function buildTree(data) {
 
   // Build categories
   Object.keys(data).forEach(category => {
-    // Create category wrapper
+    // create category wrapper
     const catDiv = document.createElement('div');
     catDiv.className = 'category has-children';
 
@@ -33,11 +33,11 @@ function buildTree(data) {
     invList.className = 'investor-list';
     invList.style.display = 'none';
 
-    // Toggle investor list on header click
+    // Toggle investor list
     catHeader.addEventListener('click', () => {
       const open = invList.style.display === 'none';
       invList.style.display = open ? 'block' : 'none';
-      catArrow.textContent = open ? '\u25BC' : '\u25B6'; // down vs right
+      catArrow.textContent = open ? '\u25BC' : '\u25B6';
     });
 
     // Iterate investors
@@ -76,7 +76,14 @@ function buildTree(data) {
       data[category][investor].forEach(company => {
         const compItem = document.createElement('li');
         compItem.className = 'company';
-        compItem.textContent = company.name;
+        // Parse valuation from name (e.g., "Company ($22.5B)")
+        const match = company.name.match(/\s*\(([^)]+)\)$/);
+        if (match) {
+          const baseName = company.name.replace(/\s*\(([^)]+)\)$/, '');
+          compItem.innerHTML = `${baseName} <span class="valuation">(${match[1]})</span>`;
+        } else {
+          compItem.textContent = company.name;
+        }
         compItem.dataset.public = company.public;
         compList.appendChild(compItem);
       });
