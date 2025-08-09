@@ -4,16 +4,28 @@
       {
         "name": "Ramp ($22.5B)",
         "public": false
-      },
-      {
-        "name": "Uber",
-        "public": true
       }
     ],
     "Jason Calacanis": [
       {
         "name": "Airbnb",
         "public": true
+      }
+    ],
+    "David Sacks": [
+      {
+        "name": "Craft Ventures",
+        "public": false
+      }
+    ],
+    "David Friedberg": [
+      {
+        "name": "The Production Board",
+        "public": false
+      },
+      {
+        "name": "Cana Technology",
+        "public": false
       }
     ]
   },
@@ -24,7 +36,25 @@
         "public": false
       },
       {
-        "name": "Tesla",
+        "name": "Neuralink",
+        "public": false
+      },
+      {
+        "name": "The Boring Company",
+        "public": false
+      }
+    ],
+    "Peter Thiel": [
+      {
+        "name": "Founders Fund",
+        "public": false
+      },
+      {
+        "name": "Anduril",
+        "public": false
+      },
+      {
+        "name": "Palantir",
         "public": true
       }
     ],
@@ -32,15 +62,17 @@
       {
         "name": "LinkedIn",
         "public": true
-      }
-    ],
-    "Peter Thiel": [
+      },
       {
-        "name": "Palantir",
-        "public": true
+        "name": "Inflection AI",
+        "public": false
       }
     ],
     "Max Levchin": [
+      {
+        "name": "HVF",
+        "public": false
+      },
       {
         "name": "Affirm",
         "public": true
@@ -58,13 +90,11 @@
         "public": false
       }
     ],
-    "David Sacks": [
-      {
-        "name": "Craft Ventures",
-        "public": false
-      }
-    ],
     "Joe Lonsdale": [
+      {
+        "name": "8VC",
+        "public": false
+      },
       {
         "name": "Palantir",
         "public": true
@@ -82,6 +112,54 @@
         "public": false
       }
     ],
+    "Marc Andreessen": [
+      {
+        "name": "a16z",
+        "public": false
+      },
+      {
+        "name": "Clubhouse",
+        "public": false
+      }
+    ],
+    "Ben Horowitz": [
+      {
+        "name": "Signal",
+        "public": false
+      }
+    ],
+    "Larry Page": [
+      {
+        "name": "Kitty Hawk",
+        "public": false
+      },
+      {
+        "name": "Alphabet",
+        "public": true
+      }
+    ],
+    "Sergey Brin": [
+      {
+        "name": "LTA Research",
+        "public": false
+      },
+      {
+        "name": "Alphabet",
+        "public": true
+      }
+    ],
+    "Michael Dell": [
+      {
+        "name": "Dell Technologies",
+        "public": true
+      }
+    ],
+    "Eric Schmidt": [
+      {
+        "name": "Schmidt Futures",
+        "public": false
+      }
+    ],
     "Sam Altman": [
       {
         "name": "OpenAI ($300B)",
@@ -93,12 +171,6 @@
         "name": "Stripe ($65B)",
         "public": false
       }
-    ],
-    "Peter Thiel": [
-      {
-        "name": "Founders Fund",
-        "public": false
-      }
     ]
   },
   "Tech Giants & FAANG": {
@@ -106,23 +178,25 @@
       {
         "name": "Meta",
         "public": true
-      }
-    ],
-    "Larry Page": [
+      },
       {
-        "name": "Alphabet",
-        "public": true
+        "name": "Chan Zuckerberg Initiative",
+        "public": false
       }
     ],
     "Jeff Bezos": [
+      {
+        "name": "Blue Origin",
+        "public": false
+      },
       {
         "name": "Amazon",
         "public": true
       }
     ],
-    "Reed Hastings": [
+    "Sundar Pichai": [
       {
-        "name": "Netflix",
+        "name": "Alphabet",
         "public": true
       }
     ],
@@ -132,10 +206,30 @@
         "public": true
       }
     ],
-    "Bill Gates": [
+    "Reed Hastings": [
       {
-        "name": "Microsoft",
+        "name": "Netflix",
         "public": true
+      }
+    ],
+    "Larry Page": [
+      {
+        "name": "Alphabet",
+        "public": true
+      },
+      {
+        "name": "Kitty Hawk",
+        "public": false
+      }
+    ],
+    "Sergey Brin": [
+      {
+        "name": "Alphabet",
+        "public": true
+      },
+      {
+        "name": "LTA Research",
+        "public": false
       }
     ]
   }
