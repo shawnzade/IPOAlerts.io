@@ -1,0 +1,97 @@
+body {
+  font-family: 'Montserrat', Arial, sans-serif !important;
+  background-color: #f7f9fc !important;
+  display: flex !important;
+  justify-content: center !important;
+  min-height: 100vh !important;
+}
+
+.container {
+  background-color: #fff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  padding: 20px 30px !important;
+  margin: 20px !important;
+  width: 90% !important;
+  max-width: 800px !important;
+}
+
+nav {
+  display: flex !important;
+  justify-content: flex-end !important;
+  margin-bottom: 10px !important;
+}
+
+nav a {
+  margin-left: 15px !important;
+  text-decoration: none !important;
+  color: #1e88e5 !important;
+  font-weight: 600 !important;
+}
+
+nav a:hover {
+  text-decoration: underline !important;
+  color: #1565c0 !important;
+}
+
+.toggle-container {
+  margin: 15px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  font-size: 14px !important;
+}
+
+.toggle-container input {
+  margin-right: 8px !important;
+}
+
+/* Node styles */
+
+.node-header {
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 4px 0 !important;
+  border-radius: 4px !important;
+}
+
+.node-header:hover {
+  background-color: #e3f2fd !important;
+}
+
+.arrow {
+  transition: transform 0.2s !important;
+  margin-right: 5px !important;
+  color: #1e88e5 !important;
+}
+
+.node-label {
+  font-weight: 600 !important;
+  color: #333 !important;
+}
+
+.has-children > .node-header .node-label {
+  color: #1e88e5 !important;
+}
+
+.has-children > .node-header:hover .node-label {
+  color: #1565c0 !important;
+}
+
+.investor-list, .company-list {
+  list-style: none !important;
+  padding-left: 20px !important;
+  margin: 0 !important;
+}
+
+.company {
+  padding: 2px 0 !important;
+}
+
+.company[data-public="true"] {
+  display: none !important;
+}
+
+.has-children .node-header {
+  background-color: #f0f7ff !important;
+}
