@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   font-family: 'Montserrat', Arial, sans-serif !important;
   background-color: #f7f9fc !important;
@@ -18,7 +19,7 @@ body {
 
 nav {
   display: flex !important;
-  justify-content: flex-end !important;
+  justify-content: space-between !important;
   margin-bottom: 10px !important;
 }
 
@@ -34,6 +35,36 @@ nav a:hover {
   color: #1565c0 !important;
 }
 
+/* Controls (search & expand/collapse) */
+.controls {
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 15px !important;
+}
+
+.controls input {
+  flex: 1 !important;
+  padding: 6px 10px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  margin-right: 10px !important;
+}
+
+.controls button {
+  background-color: #1e88e5 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 6px 12px !important;
+  margin-left: 5px !important;
+  cursor: pointer !important;
+}
+
+.controls button:hover {
+  background-color: #1669b6 !important;
+}
+
+/* Toggle styles */
 .toggle-container {
   margin: 15px 0 !important;
   display: flex !important;
@@ -46,7 +77,6 @@ nav a:hover {
 }
 
 /* Node styles */
-
 .node-header {
   cursor: pointer !important;
   display: flex !important;
@@ -74,7 +104,7 @@ nav a:hover {
   color: #1e88e5 !important;
 }
 
-.has-children > .node-header:hover .node-label {
+.has-children .node-header:hover .node-label {
   color: #1565c0 !important;
 }
 
@@ -94,4 +124,10 @@ nav a:hover {
 
 .has-children .node-header {
   background-color: #f0f7ff !important;
+}
+
+/* Valuation styling */
+.valuation {
+  font-weight: bold !important;
+  color: #2e7d32 !important;
 }

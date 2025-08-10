@@ -21,13 +21,20 @@
         <a href="login.html">Login</a>
       </div>
     </nav>
-    <label class="toggle">
+
+    <div class="controls">
+      <input type="text" id="search-input" placeholder="Search investors or companies">
+      <button id="expand-all">Expand All</button>
+      <button id="collapse-all">Collapse All</button>
+    </div>
+
+    <label class="toggle-container">
       <input type="checkbox" id="show-public">
       Show public companies
     </label>
+
     <div id="tree"></div>
   </div>
   <script defer src="js/app.js"></script>
 </body>
-
-  </html>
+</html>
