@@ -8,44 +8,36 @@ function buildTree(data) {
   const container = document.getElementById('tree');
   container.innerHTML = '';
 
-  // Build categories
   Object.keys(data).forEach(category => {
-    // create category wrapper
     const catDiv = document.createElement('div');
     catDiv.className = 'category has-children';
 
-    // Header with arrow and label
     const catHeader = document.createElement('div');
     catHeader.className = 'node-header';
     const catArrow = document.createElement('span');
     catArrow.className = 'arrow';
-    catArrow.textContent = '\u25B6'; // triangle pointing right
+    catArrow.textContent = '\u25B6';
     const catLabel = document.createElement('span');
     catLabel.className = 'node-label';
     catLabel.textContent = category;
-
     catHeader.appendChild(catArrow);
     catHeader.appendChild(catLabel);
     catDiv.appendChild(catHeader);
 
-    // Investor list
     const invList = document.createElement('ul');
     invList.className = 'investor-list';
     invList.style.display = 'none';
 
-    // Toggle investor list
     catHeader.addEventListener('click', () => {
-      const open = invList.style.display === 'none';
-      invList.style.display = open ? 'block' : 'none';
-      catArrow.textContent = open ? '\u25BC' : '\u25B6';
+      const isOpen = invList.style.display === 'none';
+      invList.style.display = isOpen ? 'block' : 'none';
+      catArrow.textContent = isOpen ? '\u25BC' : '\u25B6';
     });
 
-    // Iterate investors
     Object.keys(data[category]).forEach(investor => {
       const investorItem = document.createElement('li');
       investorItem.className = 'investor has-children';
 
-      // Investor header
       const invHeader = document.createElement('div');
       invHeader.className = 'node-header';
       const invArrow = document.createElement('span');
@@ -54,29 +46,24 @@ function buildTree(data) {
       const invLabel = document.createElement('span');
       invLabel.className = 'node-label';
       invLabel.textContent = investor;
-
       invHeader.appendChild(invArrow);
       invHeader.appendChild(invLabel);
       investorItem.appendChild(invHeader);
 
-      // Company list
       const compList = document.createElement('ul');
       compList.className = 'company-list';
       compList.style.display = 'none';
 
-      // Toggle company list
-      invHeader.addEventListener('click', (e) => {
+      invHeader.addEventListener('click', e => {
         e.stopPropagation();
-        const openComp = compList.style.display === 'none';
-        compList.style.display = openComp ? 'block' : 'none';
-        invArrow.textContent = openComp ? '\u25BC' : '\u25B6';
+        const isOpen = compList.style.display === 'none';
+        compList.style.display = isOpen ? 'block' : 'none';
+        invArrow.textContent = isOpen ? '\u25BC' : '\u25B6';
       });
 
-      // Add companies
       data[category][investor].forEach(company => {
         const compItem = document.createElement('li');
         compItem.className = 'company';
-        // Parse valuation from name (e.g., "Company ($22.5B)")
         const match = company.name.match(/\s*\(([^)]+)\)$/);
         if (match) {
           const baseName = company.name.replace(/\s*\(([^)]+)\)$/, '');
@@ -96,12 +83,26 @@ function buildTree(data) {
     container.appendChild(catDiv);
   });
 
-  // Set up show/hide public companies
-  const toggle = document.getElementById('toggle');
+  // Set up public toggle
+  const toggle = document.getElementById('show-public');
   if (toggle) {
     toggle.addEventListener('change', () => updateVisibility(toggle.checked));
     updateVisibility(toggle.checked);
   }
+
+  // Set up search filter
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      filterTree(searchInput.value.toLowerCase());
+    });
+  }
+
+  // Expand/Collapse buttons
+  const expandBtn = document.getElementById('expand-all');
+  const collapseBtn = document.getElementById('collapse-all');
+  if (expandBtn) expandBtn.addEventListener('click', expandAll);
+  if (collapseBtn) collapseBtn.addEventListener('click', collapseAll);
 }
 
 function updateVisibility(showPublic) {
@@ -111,5 +112,46 @@ function updateVisibility(showPublic) {
   });
 }
 
-// Load data initially
+function filterTree(query) {
+  const showPublic = document.getElementById('show-public').checked;
+  if (!query) {
+    // Reset: show all items and collapse lists
+    document.querySelectorAll('.category, .investor, .company').forEach(el => {
+      el.style.display = '';
+    });
+    collapseAll();
+    updateVisibility(showPublic);
+    return;
+  }
+  // Expand all for search visibility
+  expandAll();
+  document.querySelectorAll('.category, .investor, .company').forEach(el => {
+    const text = el.textContent.toLowerCase();
+    if (text.includes(query)) {
+      el.style.display = '';
+    } else {
+      el.style.display = 'none';
+    }
+  });
+  updateVisibility(showPublic);
+}
+
+function expandAll() {
+  document.querySelectorAll('.investor-list, .company-list').forEach(list => {
+    list.style.display = 'block';
+  });
+  document.querySelectorAll('.arrow').forEach(arrow => {
+    arrow.textContent = '\u25BC';
+  });
+}
+
+function collapseAll() {
+  document.querySelectorAll('.investor-list, .company-list').forEach(list => {
+    list.style.display = 'none';
+  });
+  document.querySelectorAll('.arrow').forEach(arrow => {
+    arrow.textContent = '\u25B6';
+  });
+}
+
 loadData();
