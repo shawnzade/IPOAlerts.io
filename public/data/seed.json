@@ -1,112 +1,238 @@
 {
   "People": {
     "Chamath Palihapitiya": [
-      { "name": "Ramp ($22.5B)", "public": false }
+      {
+        "name": "Ramp ($22.5B)",
+        "public": false
+      }
     ],
     "Jason Calacanis": [
-      { "name": "Airbnb", "public": true }
+      {
+        "name": "Airbnb",
+        "public": true
+      }
     ],
     "David Sacks": [
-      { "name": "Craft Ventures", "public": false }
+      {
+        "name": "Craft Ventures",
+        "public": false
+      }
     ],
     "David Friedberg": [
-      { "name": "The Production Board", "public": false },
-      { "name": "Cana Technology", "public": false }
+      {
+        "name": "The Production Board",
+        "public": false
+      },
+      {
+        "name": "Cana Technology",
+        "public": false
+      }
     ],
     "Elon Musk": [
-      { "name": "SpaceX ($400B)", "public": false },
-      { "name": "Neuralink", "public": false },
-      { "name": "The Boring Company", "public": false }
+      {
+        "name": "SpaceX ($400B)",
+        "public": false
+      },
+      {
+        "name": "Neuralink",
+        "public": false
+      },
+      {
+        "name": "The Boring Company",
+        "public": false
+      }
     ],
     "Peter Thiel": [
-      { "name": "Founders Fund", "public": false }
+      {
+        "name": "Founders Fund",
+        "public": false
+      }
     ],
     "Reid Hoffman": [
-      { "name": "LinkedIn", "public": true }
+      {
+        "name": "LinkedIn",
+        "public": true
+      }
     ],
     "Max Levchin": [
-      { "name": "HVF", "public": false },
-      { "name": "Affirm", "public": true }
+      {
+        "name": "HVF",
+        "public": false
+      },
+      {
+        "name": "Affirm",
+        "public": true
+      }
     ],
     "Ken Howery": [
-      { "name": "Founders Fund", "public": false }
+      {
+        "name": "Founders Fund",
+        "public": false
+      }
     ],
     "Luke Nosek": [
-      { "name": "Gigafund", "public": false }
+      {
+        "name": "Gigafund",
+        "public": false
+      }
     ],
     "Joe Lonsdale": [
-      { "name": "Palantir", "public": true }
+      {
+        "name": "Palantir",
+        "public": true
+      }
     ],
     "Bill Gates": [
-      { "name": "Breakthrough Energy", "public": false },
-      { "name": "TerraPower", "public": false }
+      {
+        "name": "Breakthrough Energy",
+        "public": false
+      },
+      {
+        "name": "TerraPower",
+        "public": false
+      }
     ],
     "Marc Andreessen": [
-      { "name": "Andreessen Horowitz", "public": false }
+      {
+        "name": "Andreessen Horowitz",
+        "public": false
+      }
     ],
     "Ben Horowitz": [
-      { "name": "Andreessen Horowitz", "public": false }
+      {
+        "name": "Andreessen Horowitz",
+        "public": false
+      }
     ],
     "Larry Page": [
-      { "name": "Alphabet", "public": true },
-      { "name": "Kitty Hawk", "public": false }
+      {
+        "name": "Alphabet",
+        "public": true
+      },
+      {
+        "name": "Kitty Hawk",
+        "public": false
+      }
     ],
     "Sergey Brin": [
-      { "name": "Alphabet", "public": true },
-      { "name": "LTA Research & Exploration", "public": false }
+      {
+        "name": "Alphabet",
+        "public": true
+      },
+      {
+        "name": "LTA Research & Exploration",
+        "public": false
+      }
     ],
     "Michael Dell": [
-      { "name": "Dell Technologies", "public": true },
-      { "name": "MSD Capital", "public": false }
+      {
+        "name": "Dell Technologies",
+        "public": true
+      },
+      {
+        "name": "MSD Capital",
+        "public": false
+      }
     ],
     "Eric Schmidt": [
-      { "name": "Alphabet", "public": true }
+      {
+        "name": "Alphabet",
+        "public": true
+      }
     ],
     "Sam Altman": [
-      { "name": "OpenAI ($300B)", "public": false },
-      { "name": "Worldcoin", "public": false }
+      {
+        "name": "OpenAI ($300B)",
+        "public": false
+      },
+      {
+        "name": "Worldcoin",
+        "public": false
+      }
     ],
     "Patrick Collison": [
-      { "name": "Stripe ($65B)", "public": false }
+      {
+        "name": "Stripe ($65B)",
+        "public": false
+      }
     ],
     "Mark Zuckerberg": [
-      { "name": "Meta", "public": true }
+      {
+        "name": "Meta",
+        "public": true
+      }
     ],
     "Jeff Bezos": [
-      { "name": "Amazon", "public": true },
-      { "name": "Blue Origin", "public": false }
+      {
+        "name": "Amazon",
+        "public": true
+      },
+      {
+        "name": "Blue Origin",
+        "public": false
+      }
     ],
     "Sundar Pichai": [
-      { "name": "Alphabet", "public": true }
+      {
+        "name": "Alphabet",
+        "public": true
+      }
     ],
     "Tim Cook": [
-      { "name": "Apple", "public": true }
+      {
+        "name": "Apple",
+        "public": true
+      }
     ],
     "Reed Hastings": [
-      { "name": "Netflix", "public": true }
+      {
+        "name": "Netflix",
+        "public": true
+      }
     ]
   },
   "Companies": {
     "Meta": [
-      { "name": "Meta", "public": true }
+      {
+        "name": "Meta",
+        "public": true
+      }
     ],
     "Amazon": [
-      { "name": "Amazon", "public": true }
+      {
+        "name": "Amazon",
+        "public": true
+      }
     ],
     "Apple": [
-      { "name": "Apple", "public": true }
+      {
+        "name": "Apple",
+        "public": true
+      }
     ],
     "Google": [
-      { "name": "Google", "public": true }
+      {
+        "name": "Google",
+        "public": true
+      }
     ],
     "Netflix": [
-      { "name": "Netflix", "public": true }
+      {
+        "name": "Netflix",
+        "public": true
+      }
     ],
     "Nvidia": [
-      { "name": "Nvidia", "public": true }
+      {
+        "name": "Nvidia",
+        "public": true
+      }
     ],
     "Microsoft": [
-      { "name": "Microsoft", "public": true }
+      {
+        "name": "Microsoft",
+        "public": true
+      }
     ]
   }
 }
