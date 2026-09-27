@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7f3ed">
+<title>Wrenley | AI Modernization for Private Practices</title>
+<meta name="description" content="Wrenley helps private medical practices identify operational bottlenecks, select the right AI solutions, implement them, and train staff across Southern California.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Wrenley | AI Modernization for Private Practices">
+<meta property="og:description" content="Practical, vendor-neutral AI consulting and implementation for private practices.">
+<style>
+:root{
+  --paper:#f8f5ef;
+  --paper-2:#f2ede5;
+  --white:#fffdf9;
+  --ink:#28302f;
+  --ink-soft:#4f5a57;
+  --muted:#76807c;
+  --line:rgba(57,68,65,.12);
+  --line-strong:rgba(57,68,65,.20);
+  --sand:#ded0bf;
+  --sand-2:#eadfd2;
+  --clay:#c7a98f;
+  --blue:#91aeb8;
+  --blue-deep:#6f919d;
+  --blue-soft:#dce9ec;
+  --sage:#b7c3b4;
+  --sage-soft:#e4e9e1;
+  --cream:#fbf8f2;
+  --shadow:0 28px 90px rgba(61,69,63,.10);
+  --shadow-soft:0 14px 42px rgba(61,69,63,.07);
+  --radius:28px;
+  --nav-h:76px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--paper)}
+body{margin:0;color:var(--ink);background:
+ radial-gradient(900px 620px at 92% -5%,rgba(145,174,184,.23),transparent 64%),
+ radial-gradient(760px 560px at -8% 18%,rgba(222,208,191,.30),transparent 66%),
+ var(--paper);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",Inter,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body.menu-open{overflow:hidden}
+a{text-decoration:none;color:inherit}
+button,input,textarea,select{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+svg{display:block}
+.shell{width:min(1180px,calc(100% - 44px));margin-inline:auto}
+.narrow{width:min(900px,calc(100% - 44px));margin-inline:auto}
+.proto-page{display:none}.proto-page.active{display:block}
+
+.site-nav{position:sticky;top:0;z-index:100;background:rgba(248,245,239,.79);backdrop-filter:blur(24px) saturate(150%);border-bottom:1px solid rgba(57,68,65,.075)}
+.nav-inner{height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:760;font-size:20px;letter-spacing:-.04em;flex:0 0 auto}
+.brand-mark{width:31px;height:31px;min-width:31px;border-radius:10px;position:relative;overflow:hidden;background:#ece4d9;border:1px solid rgba(76,91,87,.12);box-shadow:0 8px 22px rgba(89,105,99,.08)}
+.brand-mark:before{content:"";position:absolute;inset:6px;border:2px solid var(--blue-deep);border-right-color:transparent;border-radius:50%;transform:rotate(18deg)}
+.brand-mark:after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;right:6px;bottom:6px;background:var(--clay);box-shadow:0 0 0 3px rgba(255,253,249,.7)}
+.nav-links{display:flex;align-items:center;gap:20px;font-size:13px;color:#56605d;white-space:nowrap;flex:1;justify-content:center}
+.nav-links a{position:relative;transition:.2s}.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-links a.active:after{content:"";position:absolute;left:0;right:0;bottom:-13px;height:2px;border-radius:2px;background:var(--blue-deep)}
+.nav-cta,.button-primary,.button-secondary,.button-soft{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;cursor:pointer;white-space:nowrap;transition:transform .2s,box-shadow .2s,background .2s}
+.nav-cta{padding:11px 17px;border-radius:999px;background:var(--ink);color:#fff;font-size:13px;font-weight:680;box-shadow:0 8px 22px rgba(40,48,47,.15)}
+.nav-cta:hover,.button-primary:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(40,48,47,.17)}
+.menu-button{display:none;width:40px;height:40px;border:0;border-radius:50%;background:rgba(255,255,255,.7);cursor:pointer;align-items:center;justify-content:center;padding:0}
+.menu-lines,.menu-lines:before,.menu-lines:after{content:"";display:block;width:17px;height:1.5px;background:var(--ink);border-radius:2px;transition:.2s}.menu-lines:before{transform:translateY(-5px)}.menu-lines:after{transform:translateY(3.5px)}
+.mobile-menu{display:none;position:fixed;inset:var(--nav-h) 0 0;background:rgba(248,245,239,.98);z-index:99;padding:22px;overflow:auto}.mobile-menu.open{display:block}.mobile-menu a{display:flex;align-items:center;justify-content:space-between;padding:18px 3px;border-bottom:1px solid var(--line);font-size:24px;font-weight:690;letter-spacing:-.035em}.mobile-menu .mobile-cta{margin-top:26px;border:0;background:var(--ink);color:#fff;border-radius:18px;padding:17px 18px;font-size:15px;justify-content:center}
+
+.hero{padding:92px 0 38px;text-align:center;overflow:hidden}.hero.compact{padding:82px 0 48px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,253,249,.66);backdrop-filter:blur(14px);font-size:12px;color:#5d6764;box-shadow:0 10px 30px rgba(61,69,63,.035)}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--blue-deep);box-shadow:0 0 0 5px rgba(111,145,157,.10)}
+.hero h1{max-width:1000px;margin:27px auto 20px;font-size:clamp(54px,8vw,94px);line-height:.95;letter-spacing:-.067em;font-weight:735}.hero.compact h1{font-size:clamp(48px,7vw,80px);max-width:960px}
+.hero-copy{max-width:760px;margin:0 auto;color:var(--ink-soft);font-size:clamp(18px,2vw,21px);line-height:1.52;letter-spacing:-.02em}
+.hero-actions{margin-top:31px;display:flex;justify-content:center;gap:11px;flex-wrap:wrap}
+.button-primary{padding:14px 21px;border-radius:999px;background:var(--ink);color:#fff;font-weight:670;box-shadow:0 10px 28px rgba(40,48,47,.13)}
+.button-secondary{padding:14px 21px;border-radius:999px;background:rgba(255,253,249,.78);border:1px solid var(--line-strong);font-weight:670;color:var(--ink)}
+.button-soft{padding:13px 18px;border-radius:999px;background:var(--blue-soft);font-weight:670;color:#496774}
+.button-secondary:hover,.button-soft:hover{transform:translateY(-1px);background:#fffdf9}
+.button-primary svg,.button-secondary svg,.button-soft svg,.nav-cta svg{width:15px;height:15px}
+
+.statement{padding:28px 0 32px}.statement-card{border:1px solid var(--line);background:rgba(255,253,249,.62);border-radius:28px;padding:34px 38px;display:grid;grid-template-columns:1.2fr .8fr;gap:34px;align-items:center;box-shadow:var(--shadow-soft)}
+.statement-card h2{margin:0;font-size:clamp(30px,4vw,48px);letter-spacing:-.048em;line-height:1.02;font-weight:710}.statement-card p{margin:0;color:var(--ink-soft);font-size:16px;line-height:1.6}
+
+.section{padding:100px 0}.section.soft{background:linear-gradient(180deg,rgba(234,223,210,.22),rgba(220,233,236,.16));border-top:1px solid rgba(57,68,65,.05);border-bottom:1px solid rgba(57,68,65,.05)}
+.section-head{max-width:780px;margin-bottom:42px}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:var(--blue-deep);font-weight:720;margin-bottom:15px}.section-title{font-size:clamp(36px,5vw,58px);line-height:1.02;letter-spacing:-.052em;margin:0 0 16px;font-weight:720}.section-copy{font-size:17px;line-height:1.6;color:var(--ink-soft);margin:0;max-width:720px}
+
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service-card{position:relative;min-height:215px;padding:25px;border-radius:24px;background:rgba(255,253,249,.78);border:1px solid var(--line);box-shadow:var(--shadow-soft);overflow:hidden}.service-card:before{content:"";position:absolute;width:110px;height:110px;right:-35px;top:-35px;border-radius:50%;background:radial-gradient(circle,rgba(145,174,184,.18),transparent 68%)}
+.service-no{font-size:11px;color:var(--blue-deep);font-weight:720;letter-spacing:.08em}.service-card h3{font-size:21px;margin:34px 0 10px;letter-spacing:-.035em}.service-card p{font-size:14.5px;line-height:1.55;color:var(--ink-soft);margin:0}.service-card .small-label{margin-top:24px;font-size:11px;color:var(--muted)}
+
+.visual-stage{position:relative;margin:42px auto 0;max-width:1080px;height:590px;perspective:1600px}.visual-glow{position:absolute;border-radius:50%;pointer-events:none}.visual-glow.one{width:390px;height:390px;right:-100px;top:0;background:radial-gradient(circle at 34% 34%,rgba(145,174,184,.35),rgba(145,174,184,0) 72%)}.visual-glow.two{width:330px;height:330px;left:-70px;bottom:-15px;background:radial-gradient(circle at 50% 50%,rgba(222,208,191,.44),rgba(222,208,191,0) 72%)}
+.example-label{display:inline-flex;align-items:center;gap:7px;margin-bottom:13px;padding:7px 10px;border-radius:999px;background:var(--blue-soft);color:#4f707a;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.workspace{position:absolute;left:50%;top:6px;transform:translateX(-50%) rotateX(3deg);width:min(980px,96%);height:540px;border-radius:34px;background:linear-gradient(180deg,rgba(255,253,249,.97),rgba(244,239,232,.94));border:1px solid rgba(255,255,255,.95);overflow:hidden;text-align:left;box-shadow:0 64px 125px rgba(68,76,70,.15),0 18px 48px rgba(68,76,70,.07),inset 0 0 0 1px rgba(57,68,65,.06);backdrop-filter:blur(30px)}
+.window-top{height:58px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 19px}.window-dots{display:flex;gap:7px}.window-dots span{width:8px;height:8px;border-radius:50%;background:#d8d2c8}.window-dots span:nth-child(1){background:#d1ae9d}.window-dots span:nth-child(2){background:#d8c89e}.window-dots span:nth-child(3){background:#9db6a5}.window-title{font-size:11px;color:#737d79;font-weight:620}.example-chip{font-size:10px;color:#64716c;background:#fffdf9;border:1px solid var(--line);padding:7px 9px;border-radius:999px}
+.workspace-body{height:calc(100% - 58px);display:grid;grid-template-columns:210px 1fr}.workspace-sidebar{border-right:1px solid var(--line);padding:18px 14px;background:rgba(236,229,220,.28)}.sidebar-label{font-size:9.5px;text-transform:uppercase;letter-spacing:.13em;color:#9ca39f;padding:6px 9px 8px}.sidebar-item{display:flex;align-items:center;gap:10px;padding:11px 10px;border-radius:12px;font-size:11.5px;color:#69746f;margin:3px 0}.sidebar-item.active{background:#fffdf9;color:var(--ink);box-shadow:0 8px 22px rgba(68,76,70,.06)}.sidebar-glyph{width:23px;height:23px;border-radius:7px;background:linear-gradient(145deg,#edf0ea,#fffdf9);border:1px solid rgba(57,68,65,.06);display:grid;place-items:center}.sidebar-glyph svg{width:12px;height:12px;color:#6c7d77}
+.workspace-main{padding:27px 28px}.workspace-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}.workspace-head h3{margin:0 0 7px;font-size:27px;letter-spacing:-.043em}.workspace-head p{margin:0;color:#7c8581;font-size:12.5px;line-height:1.55;max-width:430px}.signal-pill{font-size:10.5px;color:#506f78;background:var(--blue-soft);padding:8px 10px;border-radius:10px;font-weight:690}
+.opportunity-row{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:27px}.opportunity{background:rgba(255,253,249,.9);border:1px solid rgba(57,68,65,.06);border-radius:18px;padding:17px;min-height:130px;box-shadow:0 15px 28px rgba(68,76,70,.04)}.opportunity small{font-size:9px;color:#9aa29e;letter-spacing:.04em}.opportunity strong{display:block;margin-top:11px;font-size:13.5px;letter-spacing:-.02em}.opportunity p{font-size:10.7px;line-height:1.45;color:#7b8580;margin:7px 0 0}.fit-bar{height:5px;background:#ece8e1;border-radius:99px;margin-top:15px;overflow:hidden}.fit-bar span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--clay),var(--blue))}.fit-bar.med span{width:66%}.fit-bar.high span{width:84%}.fit-bar.low span{width:48%}
+.recommend-card{margin-top:14px;background:rgba(255,253,249,.88);border:1px solid rgba(57,68,65,.06);border-radius:18px;padding:16px}.recommend-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:6px}.recommend-head small{font-size:9px;color:#9aa29e;letter-spacing:.04em}.recommend-head span{font-size:9px;background:var(--sage-soft);color:#60705f;padding:5px 7px;border-radius:999px}.recommend-row{display:grid;grid-template-columns:1.05fr 1fr .65fr;gap:12px;padding:9px 0;border-top:1px solid rgba(57,68,65,.055);font-size:10.3px;color:#737d78}.recommend-row b{color:var(--ink);font-weight:650}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}.copy-stack{margin-top:24px;display:grid;gap:12px}.copy-point{display:flex;gap:11px;align-items:flex-start;color:var(--ink-soft);font-size:14.5px;line-height:1.5}.checkmark{width:22px;height:22px;flex:0 0 auto;border-radius:50%;display:grid;place-items:center;background:var(--sage-soft);color:#60705f;font-size:11px;font-weight:800}
+.flow-window{background:linear-gradient(180deg,#fffdf9,#f2ede6);border:1px solid rgba(57,68,65,.10);border-radius:28px;box-shadow:var(--shadow);overflow:hidden}.flow-head{padding:17px 19px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.flow-head strong{font-size:13px}.flow-head span{font-size:10px;color:var(--muted);background:var(--blue-soft);padding:6px 8px;border-radius:999px}.flow-body{padding:23px}.flow-step{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:15px 0;border-bottom:1px solid var(--line)}.flow-step:last-child{border-bottom:0}.step-dot{width:32px;height:32px;border-radius:10px;background:var(--sand-2);display:grid;place-items:center;font-size:11px;font-weight:750;color:#785f4f}.flow-step b{font-size:13px;display:block;margin-bottom:4px}.flow-step p{font-size:11.5px;color:var(--muted);margin:0;line-height:1.45}
+
+.phone-visual{position:relative;min-height:510px;display:grid;place-items:center}.phone-glow{position:absolute;width:390px;height:390px;border-radius:50%;background:radial-gradient(circle,rgba(145,174,184,.31),rgba(145,174,184,0) 70%)}.call-card{position:relative;width:min(430px,100%);background:linear-gradient(180deg,rgba(255,253,249,.97),rgba(242,237,229,.95));border:1px solid rgba(57,68,65,.09);border-radius:32px;padding:20px;box-shadow:var(--shadow)}.call-title{display:flex;align-items:center;justify-content:space-between}.caller{display:flex;align-items:center;gap:11px}.avatar{width:39px;height:39px;border-radius:13px;background:var(--sand-2);display:grid;place-items:center;color:#7c6757;font-size:11px;font-weight:730}.caller b{display:block;font-size:12px}.caller span{display:block;font-size:9.5px;color:var(--muted);margin-top:3px}.live-pill{font-size:9.5px;background:var(--sage-soft);color:#5d715f;padding:7px 8px;border-radius:999px}.transcript{display:grid;gap:9px;margin:23px 0}.speech{max-width:86%;padding:12px 13px;border-radius:15px 15px 15px 5px;background:#fffdf9;border:1px solid var(--line);font-size:10.8px;line-height:1.45;color:#626d68}.speech.ai{margin-left:auto;background:var(--blue-soft);border-color:rgba(111,145,157,.12);border-radius:15px 15px 5px 15px;color:#51686f}.call-summary{background:#fffdf9;border:1px solid var(--line);border-radius:18px;padding:15px}.call-summary small{font-size:8.5px;color:#9da49f;letter-spacing:.08em}.summary-row{display:flex;justify-content:space-between;gap:20px;padding:11px 0;border-bottom:1px solid var(--line);font-size:10px}.summary-row b{font-weight:650}.summary-row span{color:#727d78;text-align:right}.summary-action{margin-top:12px;background:var(--sand-2);padding:11px;border-radius:12px;font-size:9.5px;display:flex;justify-content:space-between;gap:10px;color:#6b5b50}
+
+.solution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.solution-pill{background:rgba(255,253,249,.72);border:1px solid var(--line);border-radius:20px;padding:22px}.solution-pill strong{display:block;font-size:15px;margin-bottom:6px}.solution-pill span{font-size:12px;color:var(--muted);line-height:1.45}
+
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.process-card{padding:24px;border-radius:24px;background:rgba(255,253,249,.76);border:1px solid var(--line);min-height:210px}.process-card .num{font-size:11px;color:var(--blue-deep);font-weight:740;letter-spacing:.08em}.process-card h3{font-size:20px;letter-spacing:-.03em;margin:36px 0 9px}.process-card p{font-size:13.5px;line-height:1.55;color:var(--ink-soft);margin:0}
+
+.security-panel{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;border-radius:32px;background:#34403e;color:#f8f5ef;padding:52px;box-shadow:var(--shadow)}.security-panel h2{font-size:clamp(35px,5vw,54px);line-height:1.04;letter-spacing:-.05em;margin:0 0 15px}.security-panel p{color:#cbd4d0;line-height:1.6;margin:0;max-width:640px}.security-card{border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.06);border-radius:24px;padding:25px}.shield{width:45px;height:45px;border-radius:15px;background:rgba(220,233,236,.15);display:grid;place-items:center;margin-bottom:22px}.shield svg{width:22px;height:22px;color:#cbdde0}.security-card strong{font-size:16px}.security-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.security-list span{font-size:11px;padding:10px;border-radius:11px;background:rgba(255,255,255,.055);color:#dbe1de}
+
+.page-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.info-card{padding:24px;border-radius:24px;background:rgba(255,253,249,.78);border:1px solid var(--line);min-height:210px}.info-card .mini{font-size:10px;text-transform:uppercase;letter-spacing:.10em;color:var(--blue-deep);font-weight:720}.info-card h3{font-size:21px;letter-spacing:-.03em;margin:30px 0 9px}.info-card p{font-size:13.5px;line-height:1.55;color:var(--ink-soft);margin:0}.wide-card{padding:34px;border-radius:28px;background:rgba(255,253,249,.74);border:1px solid var(--line)}
+.vendor-note{margin-top:28px;padding:26px 28px;border-radius:24px;background:var(--blue-soft);display:grid;grid-template-columns:.75fr 1.25fr;gap:25px;align-items:center}.vendor-note strong{font-size:24px;letter-spacing:-.035em}.vendor-note p{margin:0;color:#5a6e73;font-size:14px;line-height:1.55}
+
+.contact-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:40px;align-items:start}.contact-aside{padding-top:10px}.contact-aside h2{font-size:42px;line-height:1.02;letter-spacing:-.05em;margin:0 0 16px}.contact-aside p{color:var(--ink-soft);line-height:1.6}.contact-form{padding:28px;border-radius:28px;background:rgba(255,253,249,.80);border:1px solid var(--line);box-shadow:var(--shadow-soft)}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:grid;gap:7px;margin-bottom:13px}.field label{font-size:11px;color:#606b67;font-weight:650}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line-strong);background:#fffdf9;border-radius:13px;padding:13px 14px;color:var(--ink);outline:none}.field textarea{min-height:120px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:rgba(111,145,157,.7);box-shadow:0 0 0 3px rgba(145,174,184,.12)}
+
+.service-deliverable{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);font-size:11px;line-height:1.45;color:#78817d;text-transform:uppercase;letter-spacing:.055em;font-weight:650}
+.local-presence{display:grid;grid-template-columns:.85fr 1.15fr;gap:18px;align-items:stretch;margin-top:42px}.local-visual{min-height:300px;border-radius:30px;background:linear-gradient(145deg,rgba(222,208,191,.72),rgba(220,233,236,.72));border:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.local-orbit{width:170px;height:170px;border-radius:50%;border:1px solid rgba(69,86,81,.15);display:flex;align-items:center;justify-content:center;position:relative}.local-orbit:before,.local-orbit:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(111,145,157,.18)}.local-orbit:before{inset:-32px}.local-orbit:after{inset:-68px}.local-pin{width:86px;height:86px;border-radius:26px;background:rgba(255,253,249,.82);box-shadow:var(--shadow-soft);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:760;letter-spacing:-.04em;color:#5b7075}.local-copy{padding:40px;border:1px solid var(--line);border-radius:30px;background:rgba(255,253,249,.74);box-shadow:var(--shadow-soft)}.local-copy h3{font-size:34px;letter-spacing:-.045em;margin:0 0 13px}.local-copy p{font-size:16px;line-height:1.62;color:var(--ink-soft);margin:0 0 22px}.local-meta{display:flex;gap:9px;flex-wrap:wrap}.local-meta span{padding:9px 11px;border-radius:999px;background:var(--paper-2);border:1px solid var(--line);font-size:11px;color:#65706c}
+.testimonial-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:start}.testimonial-intro{position:sticky;top:110px}.testimonial-intro h2{font-size:clamp(38px,5vw,60px);line-height:1;letter-spacing:-.052em;margin:0 0 18px}.testimonial-intro p{color:var(--ink-soft);font-size:16px;line-height:1.65;max-width:440px}.testimonial-note{margin-top:24px;padding:18px;border-radius:20px;background:var(--blue-soft);color:#536d75;font-size:12px;line-height:1.55}.testimonial-form{background:rgba(255,253,249,.78);border:1px solid var(--line);border-radius:30px;padding:30px;box-shadow:var(--shadow-soft)}.consent{display:flex;gap:11px;align-items:flex-start;margin:8px 0 20px;color:#66706d;font-size:12px;line-height:1.45}.consent input{margin-top:2px}.form-status{display:none;margin-top:15px;padding:12px 14px;border-radius:14px;background:var(--sage-soft);color:#53655a;font-size:12px}.form-status.show{display:block}.published-empty{margin-top:60px;border-top:1px solid var(--line);padding-top:35px;display:flex;justify-content:space-between;gap:30px;align-items:center}.published-empty h3{margin:0;font-size:25px;letter-spacing:-.035em}.published-empty p{margin:0;max-width:540px;color:var(--muted);font-size:13px;line-height:1.55}
+.social-links{display:flex;align-items:center;gap:9px}.social-link{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:rgba(255,253,249,.72);display:flex!important;align-items:center;justify-content:center;padding:0!important;transition:.2s}.social-link:hover{transform:translateY(-1px);background:#fffdf9}.social-link svg{width:15px;height:15px}.footer-location{margin-top:11px;font-size:12px;color:#737d79}.footer-bottom-right{display:flex;align-items:center;gap:17px}
+.cta-section{padding:40px 0 100px}.cta-box{text-align:center;border-radius:34px;padding:70px 30px;background:linear-gradient(145deg,rgba(222,208,191,.62),rgba(220,233,236,.72));border:1px solid rgba(57,68,65,.08);box-shadow:var(--shadow-soft)}.cta-box h2{font-size:clamp(38px,6vw,64px);letter-spacing:-.055em;line-height:1;margin:0 0 16px}.cta-box p{max-width:620px;margin:0 auto 26px;color:#586561;font-size:16px;line-height:1.55}
+
+.legal{padding:80px 0 110px}.legal h1{font-size:58px;letter-spacing:-.055em;margin:0 0 36px}.legal h2{font-size:21px;margin:34px 0 10px}.legal p{color:var(--ink-soft);line-height:1.7}
+
+footer{border-top:1px solid var(--line);padding:46px 0 28px;background:rgba(247,243,237,.65)}.footer-main{display:grid;grid-template-columns:1.3fr repeat(3,.7fr);gap:38px}.footer-brand p{max-width:330px;color:var(--muted);font-size:13px;line-height:1.55;margin-top:14px}.footer-col strong{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.10em;color:#6c7772;margin-bottom:12px}.footer-col a{display:block;font-size:13px;color:#59635f;padding:6px 0}.footer-bottom{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:#8a928f;font-size:11px}
+
+.reveal{opacity:0;transform:translateY(15px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:1040px){.nav-links{gap:15px;font-size:12.5px}}
+@media(max-width:940px){.nav-links{display:none}.menu-button{display:flex}.statement-card,.split,.security-panel,.contact-grid,.vendor-note{grid-template-columns:1fr}.service-grid,.page-grid,.solution-grid{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr 1fr}.visual-stage{height:555px}.workspace{height:520px}.workspace-body{grid-template-columns:175px 1fr}.footer-main{grid-template-columns:1fr 1fr}.security-panel{gap:30px}.local-presence,.testimonial-layout{grid-template-columns:1fr}.testimonial-intro{position:static}}
+@media(max-width:680px){:root{--nav-h:68px}.shell,.narrow{width:min(100% - 28px,1180px)}.hero{padding:78px 0 35px}.hero.compact{padding:70px 0 42px}.hero h1{font-size:clamp(46px,14vw,68px)}.hero-copy{font-size:17px}.statement-card{padding:26px}.section{padding:74px 0}.service-grid,.page-grid,.solution-grid,.process-grid{grid-template-columns:1fr}.service-card,.info-card,.process-card{min-height:0}.visual-stage{height:var(--workspace-mobile-height,210px);margin-top:38px;overflow:hidden;perspective:none}.workspace{top:0;left:0;width:980px;height:540px;transform:scale(var(--workspace-mobile-scale,.36));transform-origin:top left}.visual-glow{display:none}.split{gap:38px}.phone-visual{min-height:430px}.security-panel{padding:32px 24px}.security-list{grid-template-columns:1fr}.field-row{grid-template-columns:1fr}.cta-box{padding:54px 24px}.footer-main{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}.footer-bottom{flex-direction:column}.contact-aside h2{font-size:36px}.local-copy{padding:28px}.published-empty{align-items:flex-start;flex-direction:column}.testimonial-form{padding:22px}.footer-bottom-right{width:100%;justify-content:space-between}}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="shell nav-inner">
+    <a class="brand" href="#home" data-route="home"><span class="brand-mark"></span><span>Wrenley</span></a>
+    <div class="nav-links">
+      <a href="#services" data-route="services">Services</a>
+      <a href="#ai" data-route="ai">AI at Work</a>
+      <a href="#how" data-route="how">How It Works</a>
+      <a href="#security" data-route="security">Security</a>
+      <a href="#testimonials" data-route="testimonials">Testimonials</a>
+      <a href="#about" data-route="about">About</a>
+    </div>
+    <a class="nav-cta" href="#contact" data-route="contact">Request an assessment</a>
+    <button class="menu-button" aria-label="Open menu"><span class="menu-lines"></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" aria-hidden="true">
+  <a href="#services" data-route="services">Services <span>↗</span></a>
+  <a href="#ai" data-route="ai">AI at Work <span>↗</span></a>
+  <a href="#how" data-route="how">How It Works <span>↗</span></a>
+  <a href="#security" data-route="security">Security <span>↗</span></a>
+  <a href="#testimonials" data-route="testimonials">Testimonials <span>↗</span></a>
+  <a href="#about" data-route="about">About <span>↗</span></a>
+  <a class="mobile-cta" href="#contact" data-route="contact">Request an assessment</a>
+</div>
+
+<div id="app">
+<!-- HOME -->
+<div class="proto-page active" data-view="home">
+<main>
+<section class="hero">
+  <div class="shell">
+    <div class="eyebrow reveal"><span class="dot"></span>AI modernization for private practices</div>
+    <h1 class="reveal">AI for the modern practice.</h1>
+    <p class="hero-copy reveal">We find where your practice is losing time, choose the right AI solutions, set them up, and train your team to use them.</p>
+    <div class="hero-actions reveal"><a class="button-primary" href="#contact" data-route="contact">Request an assessment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="button-secondary" href="#services" data-route="services">See what we do</a></div>
+  </div>
+  <div class="shell visual-stage reveal">
+    <div class="visual-glow one"></div><div class="visual-glow two"></div>
+    <div class="workspace">
+      <div class="window-top"><div class="window-dots"><span></span><span></span><span></span></div><div class="window-title">Practice modernization plan</div><div class="example-chip">Example workspace</div></div>
+      <div class="workspace-body">
+        <aside class="workspace-sidebar">
+          <div class="sidebar-label">Wrenley assessment</div>
+          <div class="sidebar-item active"><span class="sidebar-glyph">◫</span>Overview</div>
+          <div class="sidebar-item"><span class="sidebar-glyph">↗</span>Workflow map</div>
+          <div class="sidebar-item"><span class="sidebar-glyph">◎</span>Tool selection</div>
+          <div class="sidebar-item"><span class="sidebar-glyph">✓</span>Implementation</div>
+          <div class="sidebar-item"><span class="sidebar-glyph">◇</span>Staff training</div>
+        </aside>
+        <div class="workspace-main">
+          <div class="workspace-head"><div><div class="example-label">Example · Practice assessment</div><h3>Where AI can help first.</h3><p>A clear view of repetitive work, recommended solutions, and what should remain human.</p></div><span class="signal-pill">Prioritized</span></div>
+          <div class="opportunity-row">
+            <div class="opportunity"><small>OPPORTUNITY 01</small><strong>Incoming calls</strong><p>Routine scheduling and referral questions are consuming front-desk time.</p><div class="fit-bar high"><span></span></div></div>
+            <div class="opportunity"><small>OPPORTUNITY 02</small><strong>Staff knowledge</strong><p>Office procedures live across folders, email, and individual memory.</p><div class="fit-bar med"><span></span></div></div>
+            <div class="opportunity"><small>OPPORTUNITY 03</small><strong>Authorizations</strong><p>Payer steps and follow-up dates are difficult to keep consistent.</p><div class="fit-bar low"><span></span></div></div>
+          </div>
+          <div class="recommend-card"><div class="recommend-head"><small>RECOMMENDED NEXT STEPS</small><span>Vendor-neutral</span></div><div class="recommend-row"><b>Phone workflow</b><span>AI receptionist + staff handoff</span><span>Phase 1</span></div><div class="recommend-row"><b>Staff knowledge</b><span>Practice SOP assistant</span><span>Phase 2</span></div><div class="recommend-row"><b>Authorization flow</b><span>Structured checklist + follow-up</span><span>Phase 3</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="statement"><div class="shell"><div class="statement-card reveal"><h2>We don’t sell you another piece of software.</h2><p>We figure out which technology your practice actually needs, set it up, and make sure your staff knows how to use it.</p></div></div></section>
+
+<section class="section"><div class="shell">
+  <div class="section-head reveal"><div class="kicker">Wrenley services</div><h2 class="section-title">From “we should use AI” to a system that actually works.</h2></div>
+  <div class="service-grid">
+    <div class="service-card reveal"><div class="service-no">01</div><h3>Practice AI Assessment</h3><p>We identify where AI will actually help.</p><div class="service-deliverable">Workflow assessment + priorities</div></div>
+    <div class="service-card reveal"><div class="service-no">02</div><h3>Workflow Design</h3><p>We redesign repetitive processes.</p><div class="service-deliverable">New workflow blueprint</div></div>
+    <div class="service-card reveal"><div class="service-no">03</div><h3>Tool Selection</h3><p>We select the best AI products for each problem.</p><div class="service-deliverable">Vendor comparison + recommendation</div></div>
+    <div class="service-card reveal"><div class="service-no">04</div><h3>Implementation</h3><p>We configure and connect everything.</p><div class="service-deliverable">Working implementation</div></div>
+    <div class="service-card reveal"><div class="service-no">05</div><h3>Staff Training</h3><p>We teach the team how to use it.</p><div class="service-deliverable">Hands-on staff training</div></div>
+    <div class="service-card reveal"><div class="service-no">06</div><h3>Ongoing Optimization</h3><p>We continue improving the practice.</p><div class="service-deliverable">Monitoring + refinement</div></div>
+  </div>
+  <div class="hero-actions reveal"><a class="button-secondary" href="#services" data-route="services">Explore services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</div></section>
+
+<section class="section soft"><div class="shell split">
+  <div class="reveal"><div class="kicker">Example outcome</div><h2 class="section-title">Your practice knowledge, easier to use.</h2><p class="section-copy">We can turn approved office procedures, payer rules, and staff instructions into a searchable AI knowledge system.</p><div class="copy-stack"><div class="copy-point"><span class="checkmark">✓</span><span>Built from your practice’s approved material.</span></div><div class="copy-point"><span class="checkmark">✓</span><span>Configured around the way your staff actually works.</span></div><div class="copy-point"><span class="checkmark">✓</span><span>One example of a solution, not a required Wrenley product.</span></div></div></div>
+  <div class="flow-window reveal"><div class="flow-head"><strong>Example · Staff knowledge workflow</strong><span>Configured for the practice</span></div><div class="flow-body"><div class="flow-step"><span class="step-dot">1</span><div><b>Staff asks a question</b><p>“How do we handle a Blue Shield MRI authorization?”</p></div></div><div class="flow-step"><span class="step-dot">2</span><div><b>AI searches approved practice material</b><p>SOPs, payer instructions, and internal process notes.</p></div></div><div class="flow-step"><span class="step-dot">3</span><div><b>Staff gets the next steps</b><p>A concise answer with the source and required follow-up.</p></div></div></div></div>
+</div></section>
+
+<section class="section"><div class="shell split">
+  <div class="phone-visual reveal"><div class="phone-glow"></div><div class="call-card"><div class="call-title"><div class="caller"><div class="avatar">JS</div><div><b>Patient call</b><span>Incoming · 01:42</span></div></div><span class="live-pill">Example workflow</span></div><div class="transcript"><div class="speech">I need to reschedule my appointment and ask whether my referral is still valid.</div><div class="speech ai">I can help with both. I’ll confirm the appointment options first, then route the referral question correctly.</div></div><div class="call-summary"><small>AI CALL SUMMARY</small><div class="summary-row"><b>Intent</b><span>Reschedule + referral</span></div><div class="summary-row"><b>Priority</b><span>Routine</span></div><div class="summary-action"><span>Staff action prepared</span><span>Ready for review</span></div></div></div></div>
+  <div class="reveal"><div class="kicker">Another example</div><h2 class="section-title">Phone calls can become organized work.</h2><p class="section-copy">If phones are the bottleneck, we can evaluate AI calling platforms, configure the right one, define handoffs, and train the front desk.</p><div class="hero-actions" style="justify-content:flex-start"><a class="button-secondary" href="#ai" data-route="ai">See more examples</a></div></div>
+</div></section>
+
+<section class="section"><div class="shell"><div class="security-panel reveal"><div><div class="kicker" style="color:#bdd4d9">Healthcare AI</div><h2>Choose the tools around the data.</h2><p>Wrenley helps practices evaluate HIPAA-ready platforms, BAAs, PHI boundaries, staff permissions, and human review before implementation.</p><div class="hero-actions" style="justify-content:flex-start"><a class="button-secondary" style="background:#f8f5ef;color:#28302f;border:0" href="#security" data-route="security">See our security approach</a></div></div><div class="security-card"><div class="shield"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/><path d="m9 12 2 2 4-4"/></svg></div><strong>Practical guardrails before rollout.</strong><div class="security-list"><span>BAA review</span><span>Access controls</span><span>PHI boundaries</span><span>Staff training</span></div></div></div></div></section>
+
+<section class="cta-section"><div class="shell"><div class="cta-box reveal"><h2>Tell us three headaches your practice deals with every day.</h2><p>We’ll look at where the friction comes from, what can be simplified, and which solutions are worth implementing.</p><a class="button-primary" href="#contact" data-route="contact">Tell us your three</a></div></div></section>
+</main>
+</div>
+
+<!-- SERVICES -->
+<div class="proto-page" data-view="services"><main>
+<section class="hero compact"><div class="shell"><div class="eyebrow reveal"><span class="dot"></span>Services</div><h1 class="reveal">We diagnose the workflow before prescribing the technology.</h1><p class="hero-copy reveal">Wrenley is an implementation partner for private practices. We assess, recommend, configure, train, and improve.</p></div></section>
+<section class="section" style="padding-top:50px"><div class="shell"><div class="section-head reveal"><div class="kicker">Wrenley services</div><h2 class="section-title">What we actually do.</h2></div><div class="service-grid">
+<div class="service-card reveal"><div class="service-no">01</div><h3>Practice AI Assessment</h3><p>We identify where AI will actually help.</p><div class="service-deliverable">Workflow assessment + priorities</div></div>
+<div class="service-card reveal"><div class="service-no">02</div><h3>Workflow Design</h3><p>We redesign repetitive processes.</p><div class="service-deliverable">New workflow blueprint</div></div>
+<div class="service-card reveal"><div class="service-no">03</div><h3>Tool Selection</h3><p>We select the best AI products for each problem.</p><div class="service-deliverable">Vendor comparison + recommendation</div></div>
+<div class="service-card reveal"><div class="service-no">04</div><h3>Implementation</h3><p>We configure and connect everything.</p><div class="service-deliverable">Working implementation</div></div>
+<div class="service-card reveal"><div class="service-no">05</div><h3>Staff Training</h3><p>We teach the team how to use it.</p><div class="service-deliverable">Hands-on staff training</div></div>
+<div class="service-card reveal"><div class="service-no">06</div><h3>Ongoing Optimization</h3><p>We continue improving the practice.</p><div class="service-deliverable">Monitoring + refinement</div></div>
+</div><div class="vendor-note reveal"><strong>Vendor-neutral by design.</strong><p>Wrenley is not tied to one AI platform. We can recommend ChatGPT, phone AI, automation tools, knowledge systems, or other products based on fit, security, cost, and staff adoption.</p></div></div></section>
+<section class="section soft"><div class="shell"><div class="section-head reveal"><div class="kicker">Solutions we can implement</div><h2 class="section-title">The technology changes. The problems are familiar.</h2><p class="section-copy">These are examples of areas we can modernize after assessing the practice.</p></div><div class="solution-grid">
+<div class="solution-pill reveal"><strong>Phone & reception</strong><span>Routine calls, summaries, routing, and escalation.</span></div>
+<div class="solution-pill reveal"><strong>Staff knowledge</strong><span>SOPs, office policies, payer rules, and internal answers.</span></div>
+<div class="solution-pill reveal"><strong>Insurance & authorizations</strong><span>Requirements, checklists, documentation, and follow-up.</span></div>
+<div class="solution-pill reveal"><strong>Patient messages</strong><span>Organize routine requests and prepare staff responses.</span></div>
+<div class="solution-pill reveal"><strong>Scheduling & intake</strong><span>Reduce repetitive coordination and information entry.</span></div>
+<div class="solution-pill reveal"><strong>Practice operations</strong><span>Internal workflows, reporting, handoffs, and repetitive admin.</span></div>
+</div></div></section>
+<section class="cta-section"><div class="shell"><div class="cta-box reveal"><h2>Don’t know where to start?</h2><p>That is the point of the assessment. We find the highest-friction workflows first.</p><a class="button-primary" href="#contact" data-route="contact">Request an assessment</a></div></div></section>
+</main></div>
+
+<!-- AI AT WORK -->
+<div class="proto-page" data-view="ai"><main>
+<section class="hero compact"><div class="shell"><div class="eyebrow reveal"><span class="dot"></span>AI at Work</div><h1 class="reveal">See the kind of outcomes we can build around your practice.</h1><p class="hero-copy reveal">These are examples, not a Wrenley software catalog. The actual solution depends on your workflow, systems, security needs, and staff.</p></div></section>
+<section class="section" style="padding-top:50px"><div class="shell split"><div class="reveal"><div class="kicker">Example 01</div><h2 class="section-title">Ask the practice.</h2><p class="section-copy">A staff knowledge assistant can answer questions using approved office material instead of sending employees hunting through folders and old email.</p></div><div class="flow-window reveal"><div class="flow-head"><strong>Staff knowledge workflow</strong><span>Example</span></div><div class="flow-body"><div class="flow-step"><span class="step-dot">Q</span><div><b>“What does this payer require?”</b><p>The assistant searches the approved internal source material.</p></div></div><div class="flow-step"><span class="step-dot">A</span><div><b>Concise answer + source</b><p>Staff gets the relevant steps and knows where the answer came from.</p></div></div></div></div></div></section>
+<section class="section soft"><div class="shell split"><div class="phone-visual reveal"><div class="phone-glow"></div><div class="call-card"><div class="call-title"><div class="caller"><div class="avatar">AI</div><div><b>Incoming call</b><span>Front desk support</span></div></div><span class="live-pill">Example</span></div><div class="transcript"><div class="speech">I need to move my appointment to next week.</div><div class="speech ai">I can help with that. Let me check the available options.</div></div><div class="call-summary"><small>AFTER THE CALL</small><div class="summary-row"><b>Reason</b><span>Appointment change</span></div><div class="summary-row"><b>Status</b><span>Handled</span></div><div class="summary-action"><span>Summary created</span><span>Staff informed</span></div></div></div></div><div class="reveal"><div class="kicker">Example 02</div><h2 class="section-title">Conversation in. Organized action out.</h2><p class="section-copy">AI phone tools can handle routine requests, summarize conversations, and hand staff a clear next action when a human needs to take over.</p></div></div></section>
+<section class="section"><div class="shell"><div class="section-head reveal"><div class="kicker">More examples</div><h2 class="section-title">Different practice. Different stack.</h2></div><div class="solution-grid"><div class="solution-pill reveal"><strong>Authorization assistant</strong><span>Turns payer instructions into repeatable staff steps.</span></div><div class="solution-pill reveal"><strong>Inbox triage</strong><span>Sorts routine messages and prepares the right next action.</span></div><div class="solution-pill reveal"><strong>Internal reporting</strong><span>Summarizes operational patterns without adding spreadsheet work.</span></div><div class="solution-pill reveal"><strong>Staff onboarding</strong><span>Makes internal processes easier for new employees to learn.</span></div><div class="solution-pill reveal"><strong>Document workflows</strong><span>Extracts, organizes, and routes repetitive administrative information.</span></div><div class="solution-pill reveal"><strong>Custom automation</strong><span>Connects multiple steps when off-the-shelf software stops short.</span></div></div></div></section>
+<section class="cta-section"><div class="shell"><div class="cta-box reveal"><h2>Show us your version of the task.</h2><p>We’ll evaluate the workflow first, then decide whether AI belongs in it.</p><a class="button-primary" href="#contact" data-route="contact">Request an assessment</a></div></div></section>
+</main></div>
+
+<!-- HOW IT WORKS -->
+<div class="proto-page" data-view="how"><main>
+<section class="hero compact"><div class="shell"><div class="eyebrow reveal"><span class="dot"></span>How It Works</div><h1 class="reveal">Start with the office. Not the software.</h1><p class="hero-copy reveal">The goal is to remove friction without giving your staff another complicated system to manage.</p></div></section>
+<section class="section" style="padding-top:50px"><div class="shell"><div class="process-grid"><div class="process-card reveal"><div class="num">01</div><h3>Observe</h3><p>We learn how the practice actually operates and where staff time disappears.</p></div><div class="process-card reveal"><div class="num">02</div><h3>Recommend</h3><p>We prioritize the best opportunities and choose the right tools for each one.</p></div><div class="process-card reveal"><div class="num">03</div><h3>Implement</h3><p>We configure workflows, integrations, permissions, prompts, and handoffs.</p></div><div class="process-card reveal"><div class="num">04</div><h3>Train & improve</h3><p>We train the team, watch what works, and refine the system over time.</p></div></div></div></section>
+<section class="section soft"><div class="narrow"><div class="wide-card reveal"><div class="kicker">The principle</div><h2 class="section-title">AI should remove work, not create a new job.</h2><p class="section-copy">A technically impressive tool that your staff avoids is a failed implementation. We optimize for usefulness, adoption, security, and a simple day-to-day experience.</p></div></div></section>
+<section class="cta-section"><div class="shell"><div class="cta-box reveal"><h2>Bring us one annoying task.</h2><p>We can start with a single workflow before touching anything else.</p><a class="button-primary" href="#contact" data-route="contact">Request an assessment</a></div></div></section>
+</main></div>
+
+<!-- SECURITY -->
+<div class="proto-page" data-view="security"><main>
+<section class="hero compact"><div class="shell"><div class="eyebrow reveal"><span class="dot"></span>Security</div><h1 class="reveal">Healthcare AI needs boundaries.</h1><p class="hero-copy reveal">The right tool depends on what information it touches, who can access it, and how the workflow is configured.</p></div></section>
+<section class="section" style="padding-top:50px"><div class="shell"><div class="page-grid"><div class="info-card reveal"><div class="mini">01</div><h3>HIPAA-ready tools</h3><p>We favor platforms designed to support healthcare privacy requirements where PHI is involved.</p></div><div class="info-card reveal"><div class="mini">02</div><h3>BAA awareness</h3><p>We identify when a Business Associate Agreement is part of a compliant setup.</p></div><div class="info-card reveal"><div class="mini">03</div><h3>PHI boundaries</h3><p>We define what information should and should not enter each system.</p></div><div class="info-card reveal"><div class="mini">04</div><h3>Access control</h3><p>Staff access should match responsibilities, not default to everyone seeing everything.</p></div><div class="info-card reveal"><div class="mini">05</div><h3>Human review</h3><p>High-consequence decisions remain with the appropriate human staff or clinician.</p></div><div class="info-card reveal"><div class="mini">06</div><h3>Staff training</h3><p>Policies only work when employees understand how to use the systems correctly.</p></div></div><div class="vendor-note reveal"><strong>“HIPAA-ready” is not a magic switch.</strong><p>Compliance depends on the vendor, contract, configuration, data flow, access controls, and how the practice actually uses the technology. Wrenley helps make those implementation choices explicit.</p></div></div></section>
+<section class="cta-section"><div class="shell"><div class="cta-box reveal"><h2>Build the guardrails first.</h2><p>Then implement the workflow around them.</p><a class="button-primary" href="#contact" data-route="contact">Talk with Wrenley</a></div></div></section>
+</main></div>
+
+<!-- ABOUT -->
+<div class="proto-page" data-view="about"><main>
+<section class="hero compact"><div class="shell"><div class="eyebrow reveal"><span class="dot"></span>About Wrenley</div><h1 class="reveal">Practical AI for real offices.</h1><p class="hero-copy reveal">Wrenley helps private practices modernize without forcing staff to become AI experts or commit to one vendor.</p></div></section>
+<section class="section" style="padding-top:50px"><div class="shell split"><div class="reveal"><div class="kicker">Our approach</div><h2 class="section-title">Independent by design.</h2><p class="section-copy">We start with the operational problem, then choose the technology. That lets the practice use the best-fit mix of products instead of reshaping the office around one platform.</p></div><div class="flow-window reveal"><div class="flow-head"><strong>What matters most</strong><span>Wrenley</span></div><div class="flow-body"><div class="flow-step"><span class="step-dot">1</span><div><b>Useful</b><p>The workflow should save staff time or make the work easier.</p></div></div><div class="flow-step"><span class="step-dot">2</span><div><b>Simple</b><p>Staff should understand what to do without constant technical support.</p></div></div><div class="flow-step"><span class="step-dot">3</span><div><b>Appropriate</b><p>Security and human oversight should match the sensitivity of the task.</p></div></div></div></div></div></section>
+<section class="section" style="padding-top:35px"><div class="shell"><div class="local-presence"><div class="local-visual reveal"><div class="local-orbit"><div class="local-pin">LA</div></div></div><div class="local-copy reveal"><div class="kicker">Southern California</div><h3>Local enough to see how the office actually works.</h3><p>Wrenley is based in Los Angeles and serves private practices across Southern California. When an in-person assessment is useful, we can work directly with owners, physicians, practice managers, and staff inside the practice.</p><div class="local-meta"><span>Based in Los Angeles</span><span>Serving Southern California</span><span>On-site assessments available</span></div></div></div></div></section>
+<section class="section soft"><div class="narrow"><div class="wide-card reveal"><div class="kicker">Built for adoption</div><h2 class="section-title">Modernize without overwhelming the staff.</h2><p class="section-copy">The goal is not to put “AI” everywhere. The goal is to make the practice operate better, one high-value workflow at a time.</p></div></div></section>
+<section class="cta-section"><div class="shell"><div class="cta-box reveal"><h2>See where AI fits.</h2><p>We’ll start with the practice as it exists today.</p><a class="button-primary" href="#contact" data-route="contact">Request an assessment</a></div></div></section>
+</main></div>
+
+<!-- TESTIMONIALS -->
+<div class="proto-page" data-view="testimonials"><main>
+<section class="hero compact"><div class="shell"><div class="eyebrow reveal"><span class="dot"></span>Testimonials</div><h1 class="reveal">Share what changed for your practice.</h1><p class="hero-copy reveal">A short, specific account of what became easier is more useful than generic praise.</p></div></section>
+<section class="section" style="padding-top:45px"><div class="shell published-empty reveal" style="margin-bottom:54px"><h3>Published client stories will live here.</h3><p>We are intentionally not filling this prototype with invented reviews. Approved testimonials can be added here as they are received.</p></div>
+<div class="shell testimonial-layout"><div class="testimonial-intro reveal"><div class="kicker">Tell us your story</div><h2>Tell the story in your own words.</h2><p>Include your full name and practice so future visitors know the feedback comes from a real office. We will never publish a submitted testimonial without permission.</p><div class="testimonial-note">Please do not include patient names, health information, or other protected information in a testimonial.</div></div>
+<form class="testimonial-form reveal" id="testimonialForm"><div class="field-row"><div class="field"><label>Full name</label><input name="fullName" required autocomplete="name" placeholder="Full name"></div><div class="field"><label>Practice</label><input name="practice" required placeholder="Practice name"></div></div><div class="field-row"><div class="field"><label>Role / title</label><input name="role" placeholder="Physician, owner, practice manager…"></div><div class="field"><label>Email <span style="font-weight:400;color:#8a928f">(not displayed)</span></label><input name="email" type="email" required autocomplete="email" placeholder="you@practice.com"></div></div><div class="field"><label>Your testimonial</label><textarea name="testimonial" required placeholder="What problem did Wrenley help with, and what changed afterward?"></textarea></div><label class="consent"><input name="permission" type="checkbox" required><span>I give Wrenley permission to display this testimonial with my full name, role, and practice.</span></label><button class="button-primary" type="submit"><span class="submit-label">Submit testimonial</span></button><div class="form-status" id="testimonialStatus" role="status"></div></form></div>
+</section>
+</main></div>
+
+<!-- CONTACT -->
+<div class="proto-page" data-view="contact"><main>
+<section class="hero compact"><div class="shell"><div class="eyebrow reveal"><span class="dot"></span>Contact</div><h1 class="reveal">Tell us three headaches your practice deals with every day.</h1><p class="hero-copy reveal">You do not need to know which AI product you want. Tell us where the friction is.</p></div></section>
+<section class="section" style="padding-top:45px"><div class="shell contact-grid"><div class="contact-aside reveal"><div class="kicker">Start with the friction</div><h2>What would make the workday easier?</h2><p>Phones, authorizations, patient messages, scheduling, internal questions, paperwork, or something else. We’ll work backward from the problem.</p><div class="copy-stack"><div class="copy-point"><span class="checkmark">✓</span><span>No software decision required before the conversation.</span></div><div class="copy-point"><span class="checkmark">✓</span><span>We can begin with one workflow or several related problems.</span></div><div class="copy-point"><span class="checkmark">✓</span><span>Based in Los Angeles, serving Southern California.</span></div></div></div><form class="contact-form reveal" onsubmit="event.preventDefault();this.querySelector('.submit-label').textContent='Thanks — prototype form received';"><div class="field-row"><div class="field"><label>Name</label><input required placeholder="Your name"></div><div class="field"><label>Practice</label><input placeholder="Practice name"></div></div><div class="field-row"><div class="field"><label>Email</label><input type="email" required placeholder="you@practice.com"></div><div class="field"><label>Role</label><select><option>Physician / owner</option><option>Practice manager</option><option>Administrator</option><option>Other</option></select></div></div><div class="field"><label>Tell us three headaches your practice deals with every day.</label><textarea required style="min-height:190px" placeholder="Tell us what keeps coming up, slows your staff down, or takes more time than it should."></textarea></div><button class="button-primary" type="submit"><span class="submit-label">Request an assessment</span></button></form></div></section>
+</main></div>
+
+<!-- PRIVACY -->
+<div class="proto-page" data-view="privacy"><main><section class="legal"><div class="narrow"><h1>Privacy</h1><p>This prototype demonstrates the intended Wrenley website structure. Final privacy language should reflect the production website, analytics, forms, vendors, and data practices actually used at launch.</p><h2>Information you provide</h2><p>Information submitted through a production contact form would be used to respond to inquiries and provide requested services.</p><h2>Healthcare information</h2><p>Public website contact forms should not be used to submit patient health information unless the production workflow is specifically configured for that purpose.</p><h2>Contact</h2><p>Final contact details will be added before launch.</p></div></section></main></div>
+
+<!-- TERMS -->
+<div class="proto-page" data-view="terms"><main><section class="legal"><div class="narrow"><h1>Terms</h1><p>This prototype demonstrates the intended Wrenley website structure. Final terms should be reviewed and completed before the production website goes live.</p><h2>Website use</h2><p>Website information is provided for general informational purposes about Wrenley services.</p><h2>No medical advice</h2><p>Wrenley provides technology and workflow consulting. Website content is not medical advice and does not replace clinical judgment.</p><h2>Service scope</h2><p>Specific services, responsibilities, vendors, deliverables, and commercial terms would be defined in an applicable service agreement.</p></div></section></main></div>
+</div>
+
+<footer>
+<div class="shell"><div class="footer-main"><div class="footer-brand"><a class="brand" href="#home" data-route="home"><span class="brand-mark"></span><span>Wrenley</span></a><p>AI modernization for private practices. We assess the workflow, select the right tools, implement them, and train the team.</p><div class="footer-location">Based in Los Angeles · Serving Southern California</div></div><div class="footer-col"><strong>Explore</strong><a href="#services" data-route="services">Services</a><a href="#ai" data-route="ai">AI at Work</a><a href="#how" data-route="how">How It Works</a></div><div class="footer-col"><strong>Company</strong><a href="#about" data-route="about">About</a><a href="#security" data-route="security">Security</a><a href="#testimonials" data-route="testimonials">Testimonials</a><a href="#contact" data-route="contact">Contact</a></div><div class="footer-col"><strong>Legal</strong><a href="#privacy" data-route="privacy">Privacy</a><a href="#terms" data-route="terms">Terms</a></div></div><div class="footer-bottom"><span>© 2026 Wrenley</span><div class="footer-bottom-right"><span>AI modernization for private medical practices</span><div class="social-links"><a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="social-link" href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.3 4v10.1a4.6 4.6 0 1 1-3.6-4.5"/><path d="M14.3 4c.6 2.9 2.2 4.6 5 5"/></svg></a></div></div></div></div>
+</footer>
+<script>
+const pages=[...document.querySelectorAll('.proto-page')];
+const menu=document.querySelector('.mobile-menu');
+const menuBtn=document.querySelector('.menu-button');
+function route(){
+  let name=(location.hash||'#home').slice(1).split('?')[0];
+  if(!pages.some(p=>p.dataset.view===name)) name='home';
+  pages.forEach(p=>p.classList.toggle('active',p.dataset.view===name));
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.toggle('active',a.dataset.route===name));
+  menu.classList.remove('open'); document.body.classList.remove('menu-open'); menu.setAttribute('aria-hidden','true');
+  window.scrollTo({top:0,behavior:'instant'});
+  setTimeout(()=>{observeReveals();fitWorkspaceOnMobile();},30);
+}
+menuBtn.addEventListener('click',()=>{const open=menu.classList.toggle('open');document.body.classList.toggle('menu-open',open);menu.setAttribute('aria-hidden',String(!open));});
+document.querySelectorAll('[data-route]').forEach(a=>a.addEventListener('click',()=>{if(a.dataset.route && location.hash==='#'+a.dataset.route){route();}}));
+window.addEventListener('hashchange',route);
+let observer;
+function observeReveals(){if(observer)observer.disconnect();const els=document.querySelectorAll('.proto-page.active .reveal');observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.08});els.forEach((el,i)=>{if(el.getBoundingClientRect().top<window.innerHeight*1.1){setTimeout(()=>el.classList.add('visible'),Math.min(i*55,330));}else observer.observe(el);});}
+function fitWorkspaceOnMobile(){
+  const stage=document.querySelector('[data-view="home"] .visual-stage');
+  if(!stage)return;
+  if(window.innerWidth<=680){
+    const baseWidth=980,baseHeight=540;
+    const scale=Math.min(stage.clientWidth/baseWidth,1);
+    stage.style.setProperty('--workspace-mobile-scale',scale.toFixed(4));
+    stage.style.setProperty('--workspace-mobile-height',Math.ceil(baseHeight*scale+2)+'px');
+  }else{
+    stage.style.removeProperty('--workspace-mobile-scale');
+    stage.style.removeProperty('--workspace-mobile-height');
+  }
+}
+window.addEventListener('resize',fitWorkspaceOnMobile);
+const testimonialForm=document.getElementById('testimonialForm');
+if(testimonialForm){
+  testimonialForm.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const status=document.getElementById('testimonialStatus');
+    const button=testimonialForm.querySelector('button[type="submit"]');
+    const label=button.querySelector('.submit-label');
+    const payload=Object.fromEntries(new FormData(testimonialForm).entries());
+    button.disabled=true; label.textContent='Submitting…';
+    try{
+      if(location.protocol==='http:'||location.protocol==='https:'){
+        const response=await fetch('/api/testimonials',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+        if(!response.ok) throw new Error('Submission endpoint not connected yet');
+        status.textContent='Thank you. Your testimonial was submitted for review.';
+      }else{
+        const pending=JSON.parse(localStorage.getItem('wrenleyPrototypeTestimonials')||'[]');
+        pending.push({...payload,submittedAt:new Date().toISOString()});
+        localStorage.setItem('wrenleyPrototypeTestimonials',JSON.stringify(pending));
+        status.textContent='Prototype submission received. On the live site, this same action will trigger a private email alert for Wrenley.';
+      }
+      status.classList.add('show'); testimonialForm.reset(); label.textContent='Submitted';
+    }catch(err){
+      status.textContent='The testimonial form is designed to send through a private server-side endpoint. That endpoint will be connected when the site is deployed.';
+      status.classList.add('show'); label.textContent='Submit testimonial'; button.disabled=false;
+    }
+  });
+}
+route();
+</script>
+</body>
+</html>
